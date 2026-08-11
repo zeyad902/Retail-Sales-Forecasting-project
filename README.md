@@ -38,6 +38,10 @@ This project builds a complete forecasting pipeline on real retail sales data sp
 | Holt-Winters | 12.78% | 9,297 | Weaker on this dataset |
  
 ✅ **ARIMA** selected as the final model with the lowest MAPE of **8.53%**
+
+### Image Result : 
+![Result of the model](/screenshots/model.png)
+
  
 ---
  
