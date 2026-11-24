@@ -8,7 +8,7 @@
 ![Prophet](https://img.shields.io/badge/Prophet-best_usable_model-0A66C2)
 ![Status](https://img.shields.io/badge/Status-Complete-2EA44F)
 
-![Model comparison](images/model_comparison.png)
+![Model comparison](screenshots/model_comparison.png)
 
 ---
 
@@ -89,7 +89,7 @@ Load and clean  ->  EDA  ->  Weekly aggregation  ->  Time series diagnostics  ->
 
 ### Correlation with units sold
 
-![Correlation heatmap](images/correlation_heatmap.png)
+![Correlation heatmap](screenshots/correlation_heatmap.png)
 
 | Feature | Correlation with `units_sold` |
 |---|---|
@@ -115,7 +115,7 @@ Load and clean  ->  EDA  ->  Weekly aggregation  ->  Time series diagnostics  ->
 
 ### Weekly units sold
 
-![Weekly sales](images/weekly_sales.png)
+![Weekly sales](screenshots/weekly_sales.png)
 
 Weekly totals range from **25,220** (week of 20 March 2012) to **109,207** (week of 14 February 2011).
 
@@ -130,7 +130,7 @@ The 20 March 2012 drop is the clearest anomaly. It looks like missing data or an
 
 ### Trend and seasonality
 
-![Decomposition](images/decomposition.png)
+![Decomposition](screenshots/decomposition.png)
 
 - **Trend:** a 52-week centered average moves from about 61K down to about 58K (roughly -5%). Demand is stable, not growing.
 - **Seasonality:** an additive decomposition with a 52-week period was fitted. With only about 2.5 years of data, the seasonal component rests on very few full cycles, so it should be read as indicative, not as proof of a strong annual pattern. Its deepest dip lines up with the March 2012 anomaly.
@@ -138,13 +138,13 @@ The 20 March 2012 drop is the clearest anomaly. It looks like missing data or an
 
 ### Moving averages
 
-![Moving averages](images/moving_averages.png)
+![Moving averages](screenshots/moving_averages.png)
 
 The 50-week moving average stays close to 60K units per week for the whole period. The 4-week average follows the short-term swings, which are real demand movements and not just noise.
 
 ### Volatility and autocorrelation
 
-![Autocorrelation](images/autocorrelation.png)
+![Autocorrelation](screenshots/autocorrelation.png)
 
 - **Volatility:** the standard deviation of week-over-week % change is **26.1%**.
 - **Autocorrelation:** weak. Lag 1 is about 0.2, and there is a small bump near lag 52 to 53 of about 0.2. Both sit only just outside the 95% band. Past sales alone are a weak predictor, which suggests pure time series models will have limited accuracy here.
@@ -161,7 +161,7 @@ The 50-week moving average stays close to 60K units per week for the whole perio
 | Holt-Winters | additive seasonality, period 52 | 12.78% | 9,297 |
 | **Prophet** | yearly seasonality, no external regressors | 9.33% | 7,413 |
 
-![Holt-Winters forecast](images/holt_winters_forecast.png)
+![Holt-Winters forecast](screenshots/holt_winters_forecast.png)
 
 ### Why Prophet, and not the lowest-error model
 
@@ -228,11 +228,7 @@ Retail-Sales-Forecasting-project/
 ├── images/                 # Plots used in this README
 ├── e-commerce.ipynb        # Full analysis: cleaning, EDA, time series, forecasting
 └── README.md
-```
 
----
-
-## About the Author
 
 **Zeyad Mohamed Goda**: Business Information Systems student at Port Said University (expected graduation 2027), building a portfolio of end-to-end data projects toward a Data Analyst role.
 
